@@ -6,7 +6,7 @@ import { EventEmitter } from 'events';
 export class MDModel extends EventEmitter {
     private editor: vscode.TextEditor;
     private text: string[] = [];
-    constructor(private context: vscode.ExtensionContext) {
+    constructor() {
         super();
         this.refresh();
         vscode.window.onDidChangeActiveTextEditor(editor => this.refresh());

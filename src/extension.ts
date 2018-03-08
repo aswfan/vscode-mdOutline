@@ -8,8 +8,8 @@ export function activate(context: vscode.ExtensionContext) {
 
     console.log('Congratulations, your extension "md-outline" is now active!');
     
-    let model = new MDModel(context);
-    let outline = new OutlineView(model);
+    let model = new MDModel();
+    let outline = new OutlineView(context, model);
 
     vscode.window.registerTreeDataProvider("outline-view", outline);
 }
