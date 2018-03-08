@@ -11,31 +11,26 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:markdown",
-        "onCommand:extension.sayHello"
+        "onLanguage:markdown"
     ],
     "main": "./out/extension",
     "contributes": {
         "views": {
             "explorer": [
                 {
-                    "id": "outline-view",
+                    "id": "mdOutline",
                     "name": "Markdown Outline"
                 }
             ]
         },
         "commands": [
             {
-                "command": "outline-view.add",
+                "command": "mdOutline.add",
                 "title": "Add"
             },
             {
-                "command": "outline-view.delete",
+                "command": "mdOutline.delete",
                 "title": "Delete"
-            },
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
             }
         ]
     },

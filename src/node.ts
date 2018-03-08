@@ -1,6 +1,8 @@
 export class Node {
     constructor(public text: string,
                 public level: number,
+                public line: number,
+                public length: number,
                 public children: Node[],
                 public value?: any) {}
 
@@ -8,7 +10,7 @@ export class Node {
 }
 
 export class NodeFactory {
-    static createNode(text: string, level: number) {
-        return new Node(text, level, []);
+    static createNode(text: string, level: number, line: number, length: number) {
+        return new Node(text, level, line, length, []);
     }
 }

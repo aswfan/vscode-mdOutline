@@ -19,11 +19,14 @@ export class OutlineView implements vscode.TreeDataProvider<Node>{
             treeItem.collapsibleState = vscode.TreeItemCollapsibleState.None;
 		}
 
-		// treeItem.command = {
-		// 	command: 'extension.openJsonSelection',
-		// 	title: '',
-		// 	arguments: [new vscode.Range(this.editor.document.positionAt(valueNode.offset), this.editor.document.positionAt(valueNode.offset + valueNode.length))]
-		// };
+		treeItem.command = {
+			command: 'mdOutline.openSelection',
+			title: '',
+			arguments: [
+				vscode.window.activeTextEditor,
+				new vscode.Range(new vscode.Position(element.line, 0), new vscode.Position(element.line, element.length))
+			]
+		};
 		treeItem.iconPath = this.getIcon(element);
 		return treeItem;
 	}
