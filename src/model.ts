@@ -43,7 +43,7 @@ export class MDModel extends EventEmitter {
         }
     }
 
-    private refresh() {
+    refresh() {
         this.editor = vscode.window.activeTextEditor;
         if(this.editor && this.editor.document.languageId === "markdown") {
             this.text = this.editor.document.getText().split('\n');

@@ -25,12 +25,8 @@
         },
         "commands": [
             {
-                "command": "mdOutline.add",
-                "title": "Add"
-            },
-            {
-                "command": "mdOutline.delete",
-                "title": "Delete"
+                "command": "extension.refresh",
+                "title": "Refresh"
             }
         ]
     },

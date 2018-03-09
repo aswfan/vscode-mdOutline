@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import { Node } from './node';
-import { MDModel } from './mdmodel';
+import { MDModel } from './model';
 
 export class OutlineView implements vscode.TreeDataProvider<Node>{
 	private _onDidChangeTreeData: vscode.EventEmitter<Node | null> = new vscode.EventEmitter<Node | null>();
